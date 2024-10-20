@@ -1,0 +1,25 @@
+<div class="row g-0 h-100 flex-nowrap">
+    <div class="col">
+        <div #navbar="ngbCollapse" [ngbCollapse]="(isCollapsed$ | async) || false" [horizontal]="true">
+            <nav class="sidebar d-flex flex-column flex-shrink-0 float-left sticky-top" data-bs-scroll="true">
+                <div class="title text-center">
+                    🦀
+                </div>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav nav-item text-justify" *ngFor="let destination of destinations">
+                        <a class="nav-link text-white" [routerLink]="[destination.location]" (click)="navbar.toggle()" routerLinkActive="router-link-active" >
+                            {{ destination.displayName }}
+                        </a>
+                    </li>
+                </ul>
+                <hr class="mb-1">
+                <div class="text-center align-items-center justify-content-center h-100">
+                    <button class="btn" type="button" [attr.aria-expanded]="isCollapsed$" aria-controls="nav-sidebar-collapse">
+                        Hehe
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

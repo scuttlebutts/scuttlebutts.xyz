@@ -1,0 +1,20 @@
+.sidebar {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+    width: -moz-fit-content;
+    width: fit-content;
+    .title {
+        font-size: 5rem;
+    }
+    background-color: black;
+}
+
+body {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+}
+
+html {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+}
